@@ -14,10 +14,9 @@ $qb = $this->createQueryBuilder('foo');
 
 $result = $qb
     ->addSelect(
-        Val\DoctrineTool\StringFunctions::getIndexStringStartBy($qb, 'foo.bar', ':startBy')
+        Val\DoctrineTool\StringFunctions::getIndexStringStartBy($qb, 'foo.bar', 'myString')
     )
-    ->orderBy('startByIndex')
-    ->setParameter('startBy', "$startBy%")
+    ->orderBy('indexStartBy')
     ->getQuery()
     ->getResult();
 ```
