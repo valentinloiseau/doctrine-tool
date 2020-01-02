@@ -1,0 +1,19 @@
+{
+    "name": "valentinloiseau/doctrine-tool",
+    "description": "Doctrine Tool",
+    "type": "library",
+    "require": {
+        "doctrine/orm": "^2.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valentin Loiseau"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Val\\DoctrineTool\\": "src/DoctrineTool"
+        }
+    }
+}
