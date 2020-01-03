@@ -9,7 +9,7 @@ class StringFunctions
     public static function getIndexStringStartBy(QueryBuilder $qb, string $field, string $startBy, ?string $alias = 'indexStartBy', bool $hidden = true): string
     {
         $hiddenString = $hidden ? 'HIDDEN ' : '';
-        $key = md5(uniqid());
+        $key = Utils::randomString();
 
         $qb->setParameter($key, "$startBy%");
 
